@@ -1,0 +1,20 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Models (too large for Git)
+models/
+
+# OS files
+.DS_Store
+
+# Test outputs
+*_translated.csv
+
+# IDE settings
+.vscode/
+.idea/

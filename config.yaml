@@ -1,0 +1,49 @@
+# THOTH Configuration File
+# Translator for Hybrid Offline Text Handling
+
+# Default translation engine: "nllb" or "argos"
+# NLLB-200: Better language coverage (200 languages), recommended for most use cases
+# Argos: May have better quality for some Western European languages
+default_engine: nllb
+
+# Default behavior for column selection
+column_defaults:
+  # Automatically select columns detected as foreign-language text
+  auto_select_foreign_text: true
+  # Skip columns that appear to contain numeric data
+  skip_numeric: true
+  # Skip columns that appear to contain date values
+  skip_dates: true
+  # Skip columns that are already in English
+  skip_english: true
+  # Skip columns that are empty or mostly empty
+  skip_empty: true
+
+# Performance settings
+performance:
+  # Number of texts to translate in each batch (higher = faster but more memory)
+  batch_size: 32
+  # Maximum number of worker threads for parallel processing
+  max_workers: 4
+  # Show progress bar during translation
+  show_progress: true
+
+# Language detection settings
+detection:
+  # Minimum confidence score to accept language detection (0.0-1.0)
+  confidence_threshold: 0.5
+  # Fallback language if detection fails or confidence is too low
+  fallback_language: eng_Latn
+
+# Per-column language overrides (optional)
+# Uncomment and modify to force specific languages for columns
+# column_overrides:
+#   description: rus_Cyrl
+#   notes: ukr_Cyrl
+#   comments: deu_Latn
+
+# Model paths (auto-populated by setup, modify if using custom locations)
+models:
+  nllb_path: models/nllb-200-distilled-600M
+  lid_path: models/lid218e.bin
+  argos_path: models/argos

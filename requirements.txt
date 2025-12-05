@@ -1,0 +1,29 @@
+# THOTH - Translator for Hybrid Offline Text Handling
+# Required Python Dependencies
+
+# Core dependencies
+pandas>=2.0.0
+pyyaml>=6.0
+openpyxl>=3.1.0  # For Excel file support
+
+# Translation engines
+transformers>=4.35.0  # For NLLB-200
+torch>=2.0.0  # PyTorch backend for transformers
+sentencepiece>=0.1.99  # Tokenizer for NLLB
+sacremoses>=0.1.0  # Text preprocessing
+
+# Alternative translation engine
+argostranslate>=1.9.0
+
+# Language detection
+fasttext>=0.9.2
+
+# Testing
+pytest>=7.0.0
+
+# Optional: GPU acceleration (uncomment if using NVIDIA GPU)
+# torch>=2.0.0+cu118  # For CUDA 11.8
+# torch>=2.0.0+cu121  # For CUDA 12.1
+
+# Note: For Apple Silicon (M1/M2/M3), torch with MPS support is included
+# in the standard PyPI distribution.
