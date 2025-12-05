@@ -50,6 +50,12 @@ THOTH provides two translation engines, giving you flexibility and redundancy:
 python thoth.py input.csv --engine nllb    # Default
 python thoth.py input.csv --engine argos   # Alternative
 ```
+### When to Use Each Engine
+
+| Engine | Best For | Avoid For |
+|--------|----------|-----------|
+| **NLLB (default)** | All languages, especially Cyrillic, Baltic, Balkan, Asian | — |
+| **Argos** | Western European (FR, DE, ES, IT, PT) when speed matters | Russian, Ukrainian, Serbian, Bulgarian, Baltic languages |
 
 ---
 
@@ -75,6 +81,46 @@ Arabic, Hebrew, Turkish, Persian (Farsi)
 
 ### Additional Languages
 Albanian, and more...
+
+## ✨ 📋 Language Codes Reference
+
+| Language | NLLB Code | Argos Code |
+|----------|-----------|------------|
+| Arabic | ara_Arab | ar |
+| Bulgarian | bul_Cyrl | bg |
+| Chinese (Simplified) | zho_Hans | zh |
+| Croatian | hrv_Latn | hr |
+| Czech | ces_Latn | cs |
+| Danish | dan_Latn | da |
+| Dutch | nld_Latn | nl |
+| English | eng_Latn | en |
+| Estonian | est_Latn | et |
+| Finnish | fin_Latn | fi |
+| French | fra_Latn | fr |
+| German | deu_Latn | de |
+| Greek | ell_Grek | el |
+| Hebrew | heb_Hebr | he |
+| Hungarian | hun_Latn | hu |
+| Icelandic | isl_Latn | — |
+| Italian | ita_Latn | it |
+| Japanese | jpn_Jpan | ja |
+| Korean | kor_Hang | ko |
+| Latvian | lvs_Latn | lv |
+| Lithuanian | lit_Latn | lt |
+| Norwegian | nob_Latn | nb |
+| Persian | pes_Arab | fa |
+| Polish | pol_Latn | pl |
+| Portuguese | por_Latn | pt |
+| Romanian | ron_Latn | ro |
+| Russian | rus_Cyrl | ru |
+| Serbian | srp_Cyrl | sr |
+| Slovak | slk_Latn | sk |
+| Slovenian | slv_Latn | sl |
+| Spanish | spa_Latn | es |
+| Swedish | swe_Latn | sv |
+| Turkish | tur_Latn | tr |
+| Ukrainian | ukr_Cyrl | uk |
+...
 
 ---
 
